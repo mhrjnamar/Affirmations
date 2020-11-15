@@ -4,13 +4,14 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.amar.affirmations.R
 import com.amar.affirmations.model.Affirmation
 
 /**
- * Adapter for the [RecyclerView] in [MainActivity]. Display [Affirmation] data object.
+ * Adapter for the [RecyclerView] in [@MainActivity]. Display [Affirmation] data object.
  */
 class ItemAdapter(
     private val context: Context,
@@ -21,8 +22,9 @@ class ItemAdapter(
     // Complex data items may need more than one view per item, and
     // you provide access to all the views for a data item in a view holder.
     // Each data item is just an Affirmation object
-    class ItemViewHolder(private val view: View) : RecyclerView.ViewHolder(view) {
+    class ItemViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val textView: TextView = view.findViewById(R.id.item_title)
+        val imageView: ImageView = view.findViewById(R.id.item_image)
     }
 
     /**
@@ -36,8 +38,9 @@ class ItemAdapter(
     /**
      * Replace the contents of a view (invoked by the layout manager)
      */
-    override fun onBindViewHolder(holder: ItemAdapter.ItemViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
         holder.textView.text = context.getString(dataSet[position].stringResourceId)
+        holder.imageView.setImageResource(dataSet[position].imageResourceId)
     }
 
     /**
