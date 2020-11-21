@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="32dp"
+    tools:context=".activities.AndroidBookExamples">
+
+    <TextView
+        android:id="@+id/welcomeText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:shadowColor="@color/blue_500"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="4"
+        android:textAppearance="?textAppearanceHeadline4"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/userName"
+        app:layout_constraintEnd_toEndOf="@id/userName"
+        app:layout_constraintStart_toStartOf="@id/userName"
+        tools:text="Welcome Amar!" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/userName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:hint="@string/enter_your_name"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/userNameEditText"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:scrollHorizontally="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <RadioGroup
+        android:id="@+id/occupationRadioGroup"
+        android:layout_width="0dip"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/userName"
+        app:layout_constraintEnd_toEndOf="@+id/userName"
+        app:layout_constraintTop_toBottomOf="@+id/userName">
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/radioStudent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/student"/>
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/radioSoftwareDeveloper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/software_developer"/>
+
+    </RadioGroup>
+
+    <com.google.android.material.checkbox.MaterialCheckBox
+        android:id="@+id/termsAndConditionCheck"
+        android:layout_width="0dip"
+        android:layout_margin="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/occupationRadioGroup"
+        app:layout_constraintStart_toStartOf="@+id/userName"
+        app:layout_constraintEnd_toEndOf="@+id/userName"
+        android:text="@string/terms_and_conditions"
+        android:layout_height="wrap_content"
+        />
+
+    <Button
+        android:id="@+id/enterButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="@string/enter"
+        app:layout_constraintEnd_toEndOf="@id/userName"
+        app:layout_constraintStart_toStartOf="@+id/userName"
+        app:layout_constraintTop_toBottomOf="@+id/termsAndConditionCheck" />
+
+    <Button
+        android:id="@+id/affirmationBtn"
+        android:layout_width="0px"
+        android:layout_height="wrap_content"
+        android:text="@string/open_affirmation"
+        app:layout_constraintTop_toBottomOf="@id/enterButton"
+        app:layout_constraintStart_toStartOf="@+id/enterButton"
+        app:layout_constraintEnd_toEndOf="@id/enterButton"
+        android:onClick="openAffirmation"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

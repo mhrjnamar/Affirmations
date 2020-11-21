@@ -12,5 +12,13 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+        <!-- Text input fields -->
+        <item name="textInputStyle">
+            @style/Widget.MaterialComponents.TextInputLayout.OutlinedBox
+        </item>
+        <!-- Radio Button Style -->
+        <item name="radioButtonStyle">@style/Widget.Affirmation.CompoundButton.RadioButton</item>
+        <!-- Checkbox Style -->
+        <item name="checkboxStyle">@style/Widget.Affirmation.CompoundButton.CheckBox</item>
     </style>
 </resources>

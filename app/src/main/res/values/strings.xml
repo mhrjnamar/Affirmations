@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Affirmations</string>
 
-<!--    Affirmations text-->
+    <!--    Affirmations text-->
     <string name="affirmation1">I am string.</string>
     <string name="affirmation2">I believe in myself.</string>
     <string name="affirmation3">Each day is a new opportunity to grow and be a better version of myself.</string>
@@ -12,4 +12,10 @@
     <string name="affirmation8">I have the courage to follow my heart.</string>
     <string name="affirmation9">Things will unfold at precisely the right time.</string>
     <string name="affirmation10">I will be present in all the moments that this day brings.</string>
+    <string name="enter_your_name">Enter your name</string>
+    <string name="enter">Enter</string>
+    <string name="open_affirmation">Open Affirmation</string>
+    <string name="terms_and_conditions">I accept all terms and conditions</string>
+    <string name="student">Student</string>
+    <string name="software_developer">Software Developer</string>
 </resources>
